@@ -11,9 +11,7 @@ app.use(cors());
 database();
 
 
-app.use('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use('/user',require("./router/userrouter"))
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
