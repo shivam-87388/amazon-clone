@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const user = (../models/UserSchem)
+const user = require("../models/UserSchema");
 
 //create account
 router.post("/create_user", async(req,res)=>{
     try {
-        const createUser = await user.create
+        const existUser = await user.find
         res(200).json({
             message:"sucessfully account created"
         })
