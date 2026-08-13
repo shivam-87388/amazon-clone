@@ -11,6 +11,7 @@ router.post("/create_user", async(req,res)=>{
                 message:"user already exist"
             })   
         } else  {
+            
            const createUser = await user.create({
             name:req.body.name,
             email:req.body.email,
