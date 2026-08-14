@@ -2,12 +2,15 @@ import React from 'react'
 
 const createAccount = () => {
   return (
-    <div className="bg-white h-screen">
-     <div className="">
+    <div className="flex items-center justify-center bg-white h-100vh">
+     <div className=" bg-center bg-contain bg-no-repeat bg-[url('/rectangle.png')]  ">
+
+     <h1 className="">Create Account</h1>
+     </div>
 
      </div>
 
-    </div>
+    
   )
 }
 
