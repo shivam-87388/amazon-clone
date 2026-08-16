@@ -4,9 +4,10 @@ const createAccount = () => {
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
       <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center ">
-      <form className="flex flex-col  items-center justify-center px-8 py-4">
+      <form className="flex flex-col  items-center justify-center px-6 py-8">
         <h1 className="text-4xl font-bold font-['Lora'] text-white" >Create Account</h1>
-        <div className="flex flex-col px-12 py-4 gap-0.5">
+        
+        <div className="flex flex-col w-full px-2 py-4  gap-0.5">
           {/* fullname field */}
           <div className=" flex flex-col text-white font-['Lora']">
           <label htmlFor="fullName" className=" font-bold">Full Name</label>
