@@ -3,7 +3,7 @@ import React from 'react'
 const createAccount = () => {
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
-      <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center rounded-4xl">
+      <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center ">
       <form className="flex flex-col  items-center justify-center px-8 py-4">
         <h1 className="text-4xl font-bold font-['Lora'] text-white" >Create Account</h1>
         <div className="flex flex-col px-12 py-4 gap-0.5">
@@ -20,6 +20,7 @@ const createAccount = () => {
           <label htmlFor="confirmpassword" className="text-white font-bold font-['Lora']">Confirm Password</label>
           <input type="password" id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md"></input>
         </div>
+        <button className="w-full bg">Create Account</button>
         
         
         
