@@ -4,14 +4,13 @@ const createAccount = () => {
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
       <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center ">
-      <form className="flex flex-col  items-center justify-center px-6 py-8">
+      <form className="flex flex-col items-center justify-center px-12 py-12">
         <h1 className="text-4xl font-bold font-['Lora'] text-white" >Create Account</h1>
-        
-        <div className="flex flex-col w-full px-2 py-4  gap-0.5">
+        <div className="flex flex-col w-full px-2 py-4 gap-1">
           {/* fullname field */}
-          <div className=" flex flex-col text-white font-['Lora']">
+          <div className="flex flex-col text-white font-['Lora']">
           <label htmlFor="fullName" className=" font-bold">Full Name</label>
-          <input type="text" id="fullName" name="user_name"required className="px-2.5 py-1 border-2 border-white rounded-md"></input>
+          <input type="text" id="fullName" name="user_name"required className="px-2.5 py-1 border-2 border-white rounded-md  active:ring-none"></input>
           </div>
           
           {/* email field */}
@@ -33,10 +32,7 @@ const createAccount = () => {
           </div>
           
         </div>
-        <div className=" w-full px-6 py-0.5">
         <button className="w-full bg-teal-600 text-2xl text-white rounded-md ">Create Account</button>
-
-        </div>
         
         
         
