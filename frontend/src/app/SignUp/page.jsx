@@ -8,9 +8,15 @@ const createAccount = () => {
         <h1 className="text-4xl font-bold font-['Lora'] text-white" >Create Account</h1>
         <div className="flex flex-col px-12 py-4 gap-0.5">
           {/* fullname field */}
-          <label htmlFor="fullName" className="text-white font-bold font-['Lora']">Full Name</label>
+          <div className=" flex flex-col text-white font-['Lora']">
+          <label htmlFor="fullName" className=" font-bold">Full Name</label>
           <input type="text" id="fullName" name="user_name"required className="px-2.5 py-1 border-2 border-white rounded-md"></input>
+          </div>
+          
           {/* email field */}
+          <div>
+            
+          </div>
           <label htmlFor="userEmail" className="text-white font-bold font-['Lora']">Email</label>
           <input type="email" id="userEmail" name="email_address" required className="px-2.5 py-1 border-2 border-white rounded-md"></input>
           {/* password field */}
