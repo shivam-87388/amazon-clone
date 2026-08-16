@@ -14,15 +14,19 @@ const createAccount = () => {
           </div>
           
           {/* email field */}
-          <div>
-            
-          </div>
+          <div className="flex flex-col">
           <label htmlFor="userEmail" className="text-white font-bold font-['Lora']">Email</label>
           <input type="email" id="userEmail" name="email_address" required className="px-2.5 py-1 border-2 border-white rounded-md"></input>
+          </div>
+          
           {/* password field */}
+          <div className="flex flex-col ">
+
+          </div>
           <label htmlFor="password" className="text-white font-bold font-['Lora']">Password</label>
           <input type="password" id="password" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md"></input>
           {/* confirm password */}
+          <div></div>
           <label htmlFor="confirmpassword" className="text-white font-bold font-['Lora']">Confirm Password</label>
           <input type="password" id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md"></input>
         </div>
