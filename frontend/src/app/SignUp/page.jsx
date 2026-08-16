@@ -20,7 +20,10 @@ const createAccount = () => {
           <label htmlFor="confirmpassword" className="text-white font-bold font-['Lora']">Confirm Password</label>
           <input type="password" id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md"></input>
         </div>
-        <button className="w-full bg">Create Account</button>
+        <div className=" w-full px-6 py-0.5">
+        <button className="w-full bg-teal-600 text-2xl text-white rounded-md ">Create Account</button>
+
+        </div>
         
         
         
