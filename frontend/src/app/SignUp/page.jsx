@@ -8,8 +8,12 @@ import { Eye, EyeOff } from 'lucide-react';
 
 const createAccount = () => {
   const [showpassword, setShowpassword] = useState(false);
+  const [hidepassword, setHidepassword] = useState(false);
   const handleClick = ()=>{
-   setShowpassword(!showpassword)
+   setShowpassword(!showpassword);
+  }
+  const handleShow = ()=>{
+    setHidepassword(!hidepassword);
   }
 
   return (
@@ -43,8 +47,8 @@ const createAccount = () => {
           <div className="flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="password" className=" font-bold ">Confirm Password</label>
           <div className="relative flex items-center">
-           <input type={(showpassword) ? "text":"password"}  id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
-           <button onClick={handleClick} className=" absolute right-2 cursor-pointer ">{(showpassword) ?<Eye/>:<EyeOff/>}</button>
+           <input type={(hidepassword) ? "text":"password"}  id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+           <button onClick={handleShow} className=" absolute right-2 cursor-pointer ">{(hidepassword) ?<Eye/>:<EyeOff/>}</button>
           </div>
           </div>
           
