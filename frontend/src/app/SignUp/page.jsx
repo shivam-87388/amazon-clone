@@ -1,6 +1,17 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import { Eye } from 'lucide-react';
+
+
+
+
 
 const createAccount = () => {
+  const [showpassword, setShowpassword] = useState(false);
+  const handleClick = ()=>{
+   setShowpassword(!showpassword)
+  }
+
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
       <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center">
@@ -8,54 +19,42 @@ const createAccount = () => {
         <h1 className="text-4xl font-bold font-['Lora'] text-white" >Create Account</h1>
         <div className="flex flex-col w-full px-2 py-4 gap-1">
           {/* fullname field */}
-          <div className="flex flex-col text-white font-['Lora']">
+          <div className="flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="fullName" className=" font-bold">Full Name</label>
-          <input type="text" id="fullName" name="user_name"required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none"></input>
+          <input type="text" id="fullName" name="user_name"required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
           </div>
           
           {/* email field */}
-          <div className="flex flex-col text-white font-['Lora']">
+          <div className="flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="userEmail" className="font-bold ">Email</label>
-          <input type="email" id="userEmail" name="email_address" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none"></input>
+          <input type="email" id="userEmail" name="email_address" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
           </div>
           
           {/* password field */}
-          <div className="flex flex-col text-white font-['Lora']">
-          <label htmlFor="password" className=" font-bold ">Password</label>
-          <input type="password" id="password" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none"></input>
+          <div className="flex flex-col text-white font-['Lora'] text-lg">
+          <label htmlFor="password" className=" font-bold">Password</label>
+          <div className="relative flex items-center">
+          <input type={(showpassword) ? "password":"text"} id="password" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+           <Eye onClick={handleClick} className=" absolute right-2 cursor-pointer"></Eye>
+          </div>
           </div>
          
           {/* confirm password */}
-          <div className="flex flex-col text-white font-['Lora']">
+          <div className="flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="confirmpassword" className=" font-bold ">Confirm Password</label>
-          <input type="password" id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none"></input>
+          <div className="relative flex items-center">
+           <input type="password" id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+           <Eye className=" absolute right-2 cursor-pointer "/>
+          </div>
           </div>
           
           
         </div>
         {/* button */}
-       
-
-        <button type="submit" className="w-full hover:cursor-pointer hover:bg-teal-800 py-1.5 bg-teal-600 text-2xl text-white rounded-md">Create Account</button>
+        <button type="submit" className="w-full border-2 border-transparent hover:cursor-pointer hover:bg-teal-800 py-1.5 bg-teal-600 text-2xl font-semibold text-white rounded-md hover:ring-1 hover:ring-teal-800 hover:border-2 hover:border-white">Create Account</button>
         
-
-       
-        
-        
-        
-
       </form>
-      
-     
-
-      
       </div>
-    
-      
-    
-
-   
-    
     </div>
     
   )
