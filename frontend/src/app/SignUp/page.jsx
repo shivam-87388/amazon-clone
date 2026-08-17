@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { Eye } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 
 
 
@@ -34,17 +34,17 @@ const createAccount = () => {
           <div className="flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="password" className=" font-bold">Password</label>
           <div className="relative flex items-center">
-          <input type={(showpassword) ? "password":"text"} id="password" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
-           <Eye onClick={handleClick} className=" absolute right-2 cursor-pointer"></Eye>
+          <input type={(showpassword) ? "text":"password"} id="password" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+           <button onClick={handleClick} className=" absolute right-2 cursor-pointer">{(showpassword) ?<Eye/>:<EyeOff />}</button>
           </div>
           </div>
          
           {/* confirm password */}
           <div className="flex flex-col text-white font-['Lora'] text-lg">
-          <label htmlFor="confirmpassword" className=" font-bold ">Confirm Password</label>
+          <label htmlFor="password" className=" font-bold ">Confirm Password</label>
           <div className="relative flex items-center">
-           <input type="password" id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
-           <Eye className=" absolute right-2 cursor-pointer "/>
+           <input type={(showpassword) ? "text":"password"}  id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+           <button onClick={handleClick} className=" absolute right-2 cursor-pointer ">{(showpassword) ?<Eye/>:<EyeOff/>}</button>
           </div>
           </div>
           
