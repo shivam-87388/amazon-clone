@@ -31,12 +31,13 @@ const createAccount = () => {
           <input type="password" id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none"></input>
           </div>
           
+          
         </div>
         {/* button */}
-        <div className="flex items-center justify-center w-full">
+       
 
-        <button className="w-full py-1.5 bg-teal-600 text-2xl text-white rounded-md ">Create Account</button>
-        </div>
+        <button type="submit" className="w-full hover:cursor-pointer hover:bg-teal-800 py-1.5 bg-teal-600 text-2xl text-white rounded-md">Create Account</button>
+        
 
        
         
