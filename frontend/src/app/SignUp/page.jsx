@@ -14,25 +14,31 @@ const createAccount = () => {
           </div>
           
           {/* email field */}
-          <div className="flex flex-col">
-          <label htmlFor="userEmail" className="text-white font-bold font-['Lora']">Email</label>
+          <div className="flex flex-col text-white font-['Lora']">
+          <label htmlFor="userEmail" className="font-bold ">Email</label>
           <input type="email" id="userEmail" name="email_address" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none"></input>
           </div>
           
           {/* password field */}
-          <div className="flex flex-col ">
-          <label htmlFor="password" className="text-white font-bold font-['Lora']">Password</label>
+          <div className="flex flex-col text-white font-['Lora']">
+          <label htmlFor="password" className=" font-bold ">Password</label>
           <input type="password" id="password" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none"></input>
           </div>
          
           {/* confirm password */}
-          <div className="flex flex-col">
-          <label htmlFor="confirmpassword" className="text-white font-bold font-['Lora']">Confirm Password</label>
+          <div className="flex flex-col text-white font-['Lora']">
+          <label htmlFor="confirmpassword" className=" font-bold ">Confirm Password</label>
           <input type="password" id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none"></input>
           </div>
           
         </div>
-        <button className="w-full bg-teal-600 text-2xl text-white rounded-md ">Create Account</button>
+        {/* button */}
+        <div className="flex items-center justify-center w-full">
+
+        <button className="w-full py-1.5 bg-teal-600 text-2xl text-white rounded-md ">Create Account</button>
+        </div>
+
+       
         
         
         
