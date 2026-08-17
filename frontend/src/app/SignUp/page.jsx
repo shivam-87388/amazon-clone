@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 const createAccount = () => {
   const [showpassword, setShowpassword] = useState(false);
@@ -13,6 +14,12 @@ const createAccount = () => {
     setHidepassword(!hidepassword);
   }
   
+  const CreateaccountSchema = yup.object().shape({
+  name: yup.string().required(),
+  email: yup.string().email().required(),
+  password: yup.string().password().min(8).required("password is required"),
+});
+
    const createAccountForm = useFormik({
      initialValues: {
        firstName: '',
