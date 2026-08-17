@@ -1,10 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react';
-
-
-
-
+import { useFormik } from 'formik';
 
 const createAccount = () => {
   const [showpassword, setShowpassword] = useState(false);
@@ -15,6 +12,17 @@ const createAccount = () => {
   const handleShow = ()=>{
     setHidepassword(!hidepassword);
   }
+  
+   const createAccountForm = useFormik({
+     initialValues: {
+       firstName: '',
+       email: '',
+       password:"",
+     },
+     
+   });
+
+ 
 
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
@@ -47,7 +55,7 @@ const createAccount = () => {
           <div className="flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="password" className=" font-bold ">Confirm Password</label>
           <div className="relative flex items-center">
-           <input type={(hidepassword) ? "text":"password"}  id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+           <input type={(hidepassword) ? "text":"password"} id="confirmpassword" name="user_password" required className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
            <button onClick={handleShow} className=" absolute right-2 cursor-pointer ">{(hidepassword) ?<Eye/>:<EyeOff/>}</button>
           </div>
           </div>
