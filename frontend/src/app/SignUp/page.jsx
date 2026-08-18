@@ -15,15 +15,18 @@ const createAccount = () => {
   }
   
   const CreateaccountSchema = yup.object().shape({
-  name: yup.string().required(),
-  email: yup.string().email().required(),
-  password: yup.string().password().min(8).required("password is required"),
+  name: yup.string().required( "name is required"),
+  email: yup.string().email().required("email is required"),
+  password: yup.string().min("minimun 8 character").required("password is required"),
+  confirm_passwrod: yup.string().min("minimun 8 character").required("password is required"),
+  
+
 });
 
    const createAccountForm = useFormik({
      initialValues: {
-       firstName: '',
-       email: '',
+       firstName: "",
+       email:"",
        password:"",
      },
      
