@@ -29,6 +29,7 @@ const createAccount = () => {
        password:"",
        confirmpassword:"",
      },
+     validationSchema: createaccountSchema,
      onSubmit:values=>{
       console.log(values);
 
