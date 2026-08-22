@@ -36,7 +36,7 @@ const createAccount = () => {
         await axios.post("http://localhost:5000/account/create-account",values);
         console.log(values);
       } catch (error) {
-        
+        console.log(error.message);
       }
 
      },
