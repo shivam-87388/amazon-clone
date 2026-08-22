@@ -19,7 +19,7 @@ const createAccount = () => {
   fullName: yup.string().required( "name is required"),
   email: yup.string().email().required("email is required"),
   password: yup.string().min(8,"minimun 8 character").required("password is required"),
-  confirmpasswrod: yup.string().oneOf([yup.ref("password")], "Passwords must match").min(8,"minimun 8 character").required("password is required"),
+  confirmpassword: yup.string().oneOf([yup.ref("password")], "Passwords must match").min(8,"minimun 8 character").required("password is required"),
 });
 
    const createAccountForm = useFormik({
@@ -31,7 +31,7 @@ const createAccount = () => {
      },
      
      onSubmit:async(values)=>{
-      console.log(createaccountSchema.error)
+      console.log(values);
 
      },
      validationSchema: createaccountSchema, 
@@ -47,33 +47,59 @@ const createAccount = () => {
         <h1 className="text-4xl font-bold font-['Lora'] text-white" >Create Account</h1>
         <div className="flex flex-col w-full px-2 py-4 gap-1">
           {/* fullname field */}
-          <div className="flex flex-col text-white font-['Lora'] text-lg">
+          <div className="relative flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="fullName" className=" font-bold">Full Name</label>
-          <input type="text" id="fullName" name="fullName"required onChange={createAccountForm.handleChange} value={createAccountForm.values.fullName} placeholder="Sinchan Nohara" className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+          <input type="text" id="fullName" name="fullName"required onBlur={createAccountForm.handleBlur} onChange={createAccountForm.handleChange} value={createAccountForm.values.fullName} placeholder="Sinchan Nohara" className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+          {/* show error message */}
+          {createAccountForm.touched.fullName && createAccountForm.errors.fullName && (
+          <span className="absolute inset-x-0 bottom-0 h-1.5 text-teal-800 text-sm font-medium">
+          {createAccountForm.errors.fullName}
+          </span>
+          )}
+          
           </div>
           
           {/* email field */}
-          <div className="flex flex-col text-white font-['Lora'] text-lg">
+          <div className=" flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="userEmail" className="font-bold ">Email</label>
-          <input type="email" id="userEmail" name="email" required  onChange={createAccountForm.handleChange} value={createAccountForm.values.email} placeholder="sinchanNohara@gmail.com" className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+          <input type="email" id="userEmail" name="email" required onBlur={createAccountForm.handleBlur} onChange={createAccountForm.handleChange} value={createAccountForm.values.email} placeholder="sinchanNohara@gmail.com" className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+
+          {/* show error message */}
+          {createAccountForm.touched.email && createAccountForm.errors.email && (
+          <span className="text-teal-800 text-sm font-medium">
+          {createAccountForm.errors.email}
+          </span>
+          )}
           </div>
           
           {/* password field */}
           <div className="flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="password" className=" font-bold">Password</label>
           <div className="relative flex items-center">
-          <input type={(showpassword) ? "text":"password"} id="password" name="password" required  onChange={createAccountForm.handleChange} value={createAccountForm.values.password} placeholder="password" className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+          <input type={(showpassword) ? "text":"password"} id="password" name="password" required onBlur={createAccountForm.handleBlur} onChange={createAccountForm.handleChange} value={createAccountForm.values.password} placeholder="password" className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
            <button  type="button" onClick={handleClick} className=" absolute right-2 cursor-pointer">{(showpassword) ?<Eye/>:<EyeOff />}</button>
           </div>
+          {/* show error message */}
+          {createAccountForm.touched.password && createAccountForm.errors.password && (
+          <span className="text-teal-800 text-sm font-medium">
+          {createAccountForm.errors.password}
+          </span>
+          )}
           </div>
          
           {/* confirm password */}
           <div className="flex flex-col text-white font-['Lora'] text-lg">
           <label htmlFor="password" className=" font-bold ">Confirm Password</label>
           <div className="relative flex items-center">
-           <input type={(hidepassword) ? "text":"password"} id="confirmpassword" name="confirmpassword" required  onChange={createAccountForm.handleChange} value={createAccountForm.values.confirmpassword} placeholder="confirm password" className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
+           <input type={(hidepassword) ? "text":"password"} id="confirmpassword" name="confirmpassword" required  onBlur={createAccountForm.handleBlur} onChange={createAccountForm.handleChange} value={createAccountForm.values.confirmpassword} placeholder="confirm password" className="px-2.5 py-1 border-2 border-white rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:border-2 focus:border-black"></input>
            <button  type="button" onClick={handleShow} className=" absolute right-2 cursor-pointer ">{(hidepassword) ?<Eye/>:<EyeOff/>}</button>
           </div>
+           {/* show error message */}
+          {createAccountForm.touched.password && createAccountForm.errors.password && (
+          <span className="text-teal-800 text-sm font-medium">
+          {createAccountForm.errors.password}
+          </span>
+          )}
           </div>
           
           
