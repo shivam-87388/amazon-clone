@@ -4,6 +4,7 @@ import { CloudDownload, Eye, EyeOff } from 'lucide-react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 const createAccount = () => {
   const [showpassword, setShowpassword] = useState(false);
@@ -15,6 +16,8 @@ const createAccount = () => {
     setHidepassword(!hidepassword);
   }
   
+  
+
   const createaccountSchema = yup.object().shape({
   
   fullName: yup.string().required( "name is required"),
@@ -33,10 +36,14 @@ const createAccount = () => {
      
      onSubmit:async(values)=>{
       try {
-        await axios.post("http://localhost:5000/account/create-account",values);
-        console.log(values);
+        const response = await axios.post("http://localhost:5000/user/create_user",values);
+        console.log(response.data.status);
+        console.log("account created sucessfully",response.data.message);
+       toast.success('Account created sucessfully');
       } catch (error) {
-        console.log(error.message);
+        console.log(error.response.data.status);
+        console.log("account not created",error.response.data.message);
+        toast.error("account not created");
       }
 
      },
@@ -45,6 +52,7 @@ const createAccount = () => {
   
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
+        <Toaster position="top-center" reverseOrder={false}/>
       <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center">
       <form onSubmit={createAccountForm.handleSubmit} className="flex flex-col items-center justify-center px-12 py-12">
         <h1 className="text-4xl font-bold font-['Lora'] text-white" >Create Account</h1>
