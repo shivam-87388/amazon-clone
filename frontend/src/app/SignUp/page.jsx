@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from 'react'
-import { Eye, EyeOff } from 'lucide-react';
+import { CloudDownload, Eye, EyeOff } from 'lucide-react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import axios from 'axios';
 
 const createAccount = () => {
   const [showpassword, setShowpassword] = useState(false);
@@ -31,15 +32,17 @@ const createAccount = () => {
      },
      
      onSubmit:async(values)=>{
-      console.log(values);
+      try {
+        await axios.post("http://localhost:5000/account/create-account",values);
+        console.log(values);
+      } catch (error) {
+        
+      }
 
      },
      validationSchema: createaccountSchema, 
    });
   
-
- 
-
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
       <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center">
