@@ -3,24 +3,13 @@ import React from 'react'
 
 const footer = () => {
   return (
-   <footer className="grid grid-cols-3 bg-[#011732] ">
-    <nav>
-        <ul>
-           <h1 className="flex items-center  justify-center text-white font-medium">about us</h1>
-        </ul>
-    </nav>
-     <nav>
-        <ul>
-            <li><a href='' className="text-white font-medium">about click shop</a></li>
-        </ul>
-    </nav>
-     <nav>
-        <ul>
-            <li><a href='' className="text-white font-medium">about click shop</a></li>
-        </ul>
-    </nav>
+    <footer className="bg-[#011732] w-full h-80">
+        <div className="grid grid-cols-4 p-6 items-center ">
+            <nav className="flex justify-center items-center text-white font-md ">Navigation Link</nav>
+        </div>
+       
 
-   </footer>
+    </footer>
   )
 }
 
