@@ -1,23 +1,33 @@
 'use client'
 import React from 'react'
-import {products} from './data'
+import products from './data'
 
 const page = () => {
   return (
     <div className="p-4">
-        <diV className="w-72 rounded-md bg-amber-300 shadow-md p-3.5 ">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D" className='w-64 h-64 rounded-lg'></img>
+      <div className="p-4 grid grid-cols-4 gap-4">
+      {products.map((product)=>{
+        return (
+        
+       <diV key={product.id} className="w-72 rounded-md bg-amber-300 shadow-md p-3.5 ">
+            <img src={product.pic} className='w-64 h-64 rounded-lg'></img>
             <div className="flex flex-col py-1">
                 
-            <h1 className="text-lg leading-tight font-semibold text-gray-500">{products.name}</h1>
-            <p className="mt-1.5">Lorem ipsum dolor sit amet.</p>
+            <h1 className="text-lg leading-tight font-semibold text-gray-500">{product.name}</h1>
+            <p className="mt-1.5">{product.desc}</p>
            
             </div>
 
         </diV>
-      
+       
+        )
+      })}
+      </div>
     </div>
   )
 }
 
 export default page
+
+
+  
