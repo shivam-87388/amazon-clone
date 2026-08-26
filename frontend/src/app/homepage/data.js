@@ -6,11 +6,13 @@ const products =[
     },
     {id:2,
         name:"shiva",
-        desc:"this"
+        desc:"this",
+        pic:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
     },
     {id:2,
         name:"shi",
-        desc:"this"
+        desc:"this",
+        Pic:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
     },
 ]
 export default products;
