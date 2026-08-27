@@ -21,21 +21,24 @@ const Footer = () => {
            <nav className="flex flex-col items-center  text-white ">
             <h3 className="font-medium text-lg">Social Link</h3>
                 <ul className="flex flex-col items-center gap-1.5 mt-1.5 font-medium">
-                    <li><a href="/">facebook</a></li>
+                    <li><a href="/" className="hover:underline">facebook</a></li>
                     <li><a href="/">instagram</a></li>
                     <li><a href="/">Youtube</a></li>
                 </ul>
             </nav>
            
-            <div className="flex flex-col items-end justify-end text-lg text-white font-medium">
+            <div className="flex flex-col justify-end text-white font-medium">
+                <h3 className="px-1.5 py-1.5 text-lg font-semibold">subscribe</h3>
                <form className="flex flex-row gap-2.5">
-                <input className="px-1.5 py-1.5 w-64 border-2 border-white rounded-lg "></input>
-                <button className="text-center text-md px-3.5 py-1.5 bg-[#FF8D28] rounded-lg font-semibold hover:cursor-pointer hover:bg-[#1DB5A7] border-2 border-transparent hover:ring-2 hover:ring-white">submit</button>
+                <input placeholder='email' className="px-1.5 py-1.5 w-64 border-2 border-white rounded-lg "></input>
+                <button className="text-center text-md px-3.5 py-1.5 bg-[#FF8D28] rounded-lg font-semibold hover:cursor-pointer hover:bg-[#1DB5A7] hover:ring-2 hover:ring-white">submit</button>
 
                </form>
             </div>
 
         </div>
+        
+        
     </footer>
   )
 }
