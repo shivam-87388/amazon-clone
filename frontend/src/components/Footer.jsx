@@ -1,7 +1,7 @@
-"use client"
+
 import React from 'react'
 
-const footer = () => {
+const Footer = () => {
   return (
     <footer className="flex items-center bg-[#011732] h-64 justify-around w-full">
         <div className="grid grid-cols-4 ">
@@ -10,18 +10,18 @@ const footer = () => {
             </div>
             <nav className="flex flex-col items-center text-lg text-white font-medium">Navagation Link
                 <ul className="flex flex-col items-center gap-1.5 mt-1.5">
-                    <a>home</a>
-                    <a>product</a>
-                    <a>about-us</a>
-                    <a>cart</a>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/">product</a></li>
+                    <li><a href="/">about</a></li>
+                    <li><a href="/">cart</a></li>
+                    
                 </ul>
             </nav>
            <nav className="flex flex-col items-center text-lg text-white font-medium">Social Link
                 <ul className="flex flex-col items-center gap-1.5 mt-1.5">
-                    <a>instagram</a>
-                    <a>facebook</a>
-                    <a>Youtube</a>
-                    <a></a>
+                    <li><a href="/"></a>instagram</li>
+                    <li><a href="/"></a>facebook</li>
+                    <li><a href="/"></a>Youtube</li>
                 </ul>
             </nav>
            
@@ -38,4 +38,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer
