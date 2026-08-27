@@ -6,10 +6,11 @@ const Footer = () => {
     <footer className="flex items-center bg-[#011732] h-64 justify-around w-full">
         <div className="grid grid-cols-4 ">
             <div className="flex items-center justify-center">
-             <img src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png"className="object-center object-contain w-40"/> 
+             <img src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png"className="object-center object-contain w-40" alt="brand logo"/> 
             </div>
-            <nav className="flex flex-col items-center text-lg text-white font-medium">Navagation Link
-                <ul className="flex flex-col items-center gap-1.5 mt-1.5">
+            <nav className="flex flex-col items-center text-white">
+                <h3 className="text-lg ">Navagation Link</h3>
+                <ul className="flex flex-col items-center gap-1.5 mt-1.5 font-medium">
                     <li><a href="/">home</a></li>
                     <li><a href="/">product</a></li>
                     <li><a href="/">about</a></li>
@@ -17,20 +18,21 @@ const Footer = () => {
                     
                 </ul>
             </nav>
-           <nav className="flex flex-col items-center text-lg text-white font-medium">Social Link
-                <ul className="flex flex-col items-center gap-1.5 mt-1.5">
-                    <li><a href="/"></a>instagram</li>
-                    <li><a href="/"></a>facebook</li>
-                    <li><a href="/"></a>Youtube</li>
+           <nav className="flex flex-col items-center  text-white ">
+            <h3 className="font-medium text-lg">Social Link</h3>
+                <ul className="flex flex-col items-center gap-1.5 mt-1.5 font-medium">
+                    <li><a href="/">facebook</a></li>
+                    <li><a href="/">instagram</a></li>
+                    <li><a href="/">Youtube</a></li>
                 </ul>
             </nav>
            
             <div className="flex flex-col items-end justify-end text-lg text-white font-medium">
-               <div className="flex flex-row gap-1.5">
-                <input className="w-64 border-2 border-white rounded-lg "></input>
-                <button className="text-md px-3.5 py-1.5 bg-[#FF8D28] rounded-lg font-semibold hover:cursor-pointer hover:bg-[#1DB5A7]">submit</button>
+               <form className="flex flex-row gap-2.5">
+                <input className="px-1.5 py-1.5 w-64 border-2 border-white rounded-lg "></input>
+                <button className="text-center text-md px-3.5 py-1.5 bg-[#FF8D28] rounded-lg font-semibold hover:cursor-pointer hover:bg-[#1DB5A7] border-2 border-transparent hover:ring-2 hover:ring-white">submit</button>
 
-               </div>
+               </form>
             </div>
 
         </div>
