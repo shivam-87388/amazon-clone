@@ -4,6 +4,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="flex items-center bg-[#011732] h-64 justify-around w-full">
+       
         <div className="grid grid-cols-4 ">
             <div className="flex items-center justify-center">
              <img src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png"className="object-center object-contain w-40" alt="brand logo"/> 
