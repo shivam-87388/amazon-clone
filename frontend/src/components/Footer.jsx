@@ -5,8 +5,9 @@ const Footer = () => {
   return (
    <footer className="flex px-6 py-14 bg-slate-900  justify-around items-start flex-wrap content-start">
   <img className="w-52 h-56" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png"/>
+  {/* navagation link */}
   <nav className="flex flex-col justify-center items-center gap-3">
-    <h3 className="felx justify-start text-white text-xl font-bold font-['Lora']">Navigation Link</h3>
+    <h3 className="felx justify-center text-white text-xl font-bold font-['Lora']">Navigation Link</h3>
     <ul className="flex flex-col justify-center items-center gap-3.5  text-white text-xl font-normal font-['Lora']">
       <li><a href='/'>home</a></li>
       <li><a href='/'>product</a></li>
@@ -16,7 +17,7 @@ const Footer = () => {
   </nav>
   {/* social links */}
    <nav className="flex flex-col justify-center items-center gap-3">
-    <h3 className="felx justify-start text-white text-xl font-bold font-['Lora']">Navigation Link</h3>
+    <h3 className="felx justify-center text-white text-xl font-bold font-['Lora']">Social Link</h3>
     <ul className="flex flex-col justify-center items-center gap-3.5  text-white text-xl font-normal font-['Lora']">
       <li><a href='/'>home</a></li>
       <li><a href='/'>product</a></li>
