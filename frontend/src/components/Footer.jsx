@@ -28,7 +28,7 @@ const Footer = () => {
     </ul>
   </nav>
   {/* subscribe */}
-  <div className="flex-1 flex flex-col gap-2 justify-center">
+  <div className="flex flex-1 flex-col gap-2 items-start self-end">
     <h4 className='flex justify-start  text-md text-white font-semibold'>subscribe</h4>
     <div className="flex-1 flex flex-row gap-3.5 justify-center flex-wrap">
     <input placeholder="email" className="flex-1 text-white text-lg ring-white ring-2 py-2.5 px-1.5 rounded-md"></input>
