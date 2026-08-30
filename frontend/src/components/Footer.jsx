@@ -5,8 +5,8 @@ const Footer = () => {
   return (
    <footer className="flex px-6 py-14 bg-slate-900 items-center">
     <div className="w-full flex lg:flex-row flex-col  items-start lg:justify-between gap-4 flex-wrap">
-        <div className="w-40 lg:flex-1 ">
-         <img className="lg:w-52 lg:h-56" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png" alt="brandimage"/>
+        <div className="w-full flex justify-center lg:flex-1 ">
+         <img className="lg:w-52 lg:h-52 w-40 h-40" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png" alt="brandimage"/>
         </div>
          {/* navagation link */}
   <nav className=" w-full lg:flex-1 flex flex-col justify-center items-center gap-3">
