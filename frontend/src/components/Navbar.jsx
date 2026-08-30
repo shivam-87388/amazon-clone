@@ -9,12 +9,16 @@ const navbar = () => {
         <img className="h-32 w-32" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png"/>
         </div>
       <div className="flex-1 flex items-center gap-14 justify-center text-teal-800 text-lg font-semibold font-['Lora']">
-        <a className="" href="#">home</a>
-        <a className="" href="">product</a>
-        <a className="" href="">about</a>
+        <a className="hover:text-underline" href="#">home</a>
+        <a className="hover:text-underline" href="">product</a>
+        <a className="hover:text-underline" href="">about</a>
       </div>
       <div className="flex-1 flex items-center justify-end gap-6">
-          <a href="#">login</a>
+        <div className="flex flex-row gap-2.5 bg-teal-800">
+        <CircleUserRound/>
+        <a href="#">login</a>
+        </div>
+          
           <a href="#">signup</a>
           <a href="#">cart</a>
       </div>
