@@ -13,10 +13,10 @@ const navbar = () => {
         <a className="hover:text-underline" href="">product</a>
         <a className="hover:text-underline" href="">about</a>
       </div>
-      <div className="flex-1 flex items-center justify-end gap-6">
-        <div className="flex flex-row gap-2.5 bg-teal-800">
+      <div className="flex-1 flex items-center justify-end gap-6 ">
+        <div className="flex flex-row items-center justify-center gap-2.5 bg-teal-800 text-white px-2.5 py-2">
         <CircleUserRound/>
-        <a href="#">login</a>
+        <a href="#">Signup</a>
         </div>
           
           <a href="#">signup</a>
