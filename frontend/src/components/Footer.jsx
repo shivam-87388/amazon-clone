@@ -3,10 +3,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-   <footer className="flex px-6 py-14 bg-slate-900 items-center ">
+   <footer className="flex px-6 py-14 bg-slate-900 items-center">
     <div className="w-full flex lg:flex-row flex-cols  items-start justify-between gap-4 flex-wrap">
         <div className="flex-1">
-         <img className="w-52 h-56 " src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png" alt="brandimage"/>
+         <img className="lg:w-52 lg:h-56" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png" alt="brandimage"/>
         </div>
          {/* navagation link */}
   <nav className=" flex-1 flex flex-col justify-center items-center gap-3">
