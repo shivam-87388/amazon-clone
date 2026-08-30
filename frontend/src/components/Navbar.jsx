@@ -14,7 +14,7 @@ const navbar = () => {
         <a className="hover:text-underline" href="">about</a>
       </div>
       <div className="flex-1 flex items-center justify-end gap-6 ">
-        <div className="flex flex-row items-center justify-center gap-2.5 bg-teal-800 text-white px-2.5 py-2 border-2 border-transparent hover:border-2 hover:border-white hover-ring-teal-800 hover:ring-2 hover:cursor-pointer">
+        <div className="flex flex-row items-center justify-center gap-1 rounded-lg bg-teal-800 text-white font-semibold px-2.5 py-2.5 border-2 border-transparent hover:cursor-pointer hover:borde-2 hover:border-white hover:ring-teal-800 hover:ring-2">
         <CircleUserRound/>
         <a href="#">Signup</a>
         </div>
