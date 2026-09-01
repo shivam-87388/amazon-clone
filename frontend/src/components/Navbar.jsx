@@ -31,7 +31,6 @@ const navbar = () => {
         <ShoppingCart/>
         <a href="#"></a>
         </div>
-        
       </div>
     </div>
 </header>
