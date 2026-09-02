@@ -1,12 +1,33 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
+import { Menu, X} from 'lucide-react';
+
 
 const page = () => {
-  return (
-    <header className=" grid grid-cols-2 w-full gap-2 p-2.5">
-        <div></div>
-        <img src="https://img.magnific.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?semt=ais_hybrid&w=740&q=80" className="object-cover"></img>
+  const [menu , setmenu] = useState(false);
+  const handleClick =()=>{
+    setmenu(!menu)
+  }
 
-    </header>
+  return (
+    
+  <header className="flex flex-row justify-between items-center bg-white m-2.5">
+    <img className="w-24 h-24" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png" alt='logo'/>
+   <button onClick={handleClick} className="bg-teal-800 rounded-md py-2.5 px-2.5">
+  {menu?<X color="#ffff" />:<Menu color="#ffff" />}
+   </button>
+   {
+    (menu)?
+            <nav className="p-2.5 bg-orange-400">
+            
+            <li>about</li>
+            <li></li>
+            <li>contact</li>
+        </nav>:
+        ""
+   }
+  </header>
+
   )
 }
 
