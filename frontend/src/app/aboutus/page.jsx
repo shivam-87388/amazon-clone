@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Menu, X} from 'lucide-react';
+import {CircleUserRound,ShoppingCart} from 'lucide-react'
 
 
 
@@ -20,12 +21,20 @@ const page = () => {
    </button>
    {
     (menu)?
-            <div className="absolute right-0 top-full mt-2 w-40 bg-orange-400 rounded-lg  flex flex-col p-2 ">
+        <div className="absolute right-0 top-full mt-2 w-40 bg-orange-400 rounded-lg  flex flex-col p-2 gap-2">
         <a href="/" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">Home</a>
         <a href="/products" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">Products</a>
         <a href="/about" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">About</a>
         <a href="/cart" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">Cart</a>
-        <a href='#' className=''></a>
+        <div className="flex flex-row  gap-1.5 px-3 py-1.5 bg-teal-800 rounded-lg font-semibold text-white">
+          <CircleUserRound color="#ffffff" />
+         <a href>Signup</a>
+        </div>
+        <div className="flex flex-row  w-32 gap-1.5 px-3 py-1.5 bg-teal-800 rounded-lg font-semibold text-white">
+          <CircleUserRound color="#ffffff" />
+         <a href>Signup</a>
+        </div>
+        
       </div>:""
    }
    </div>

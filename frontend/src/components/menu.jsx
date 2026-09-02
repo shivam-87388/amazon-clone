@@ -1,4 +1,5 @@
 import React from 'react'
+import {CircleUserRound,ShoppingCart} from 'lucide-react'
 
 const menu = () => {
   return (
