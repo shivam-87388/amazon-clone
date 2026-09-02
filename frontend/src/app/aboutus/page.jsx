@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Menu, X} from 'lucide-react';
 
 
+
 const page = () => {
   const [menu , setmenu] = useState(false);
   const handleClick =()=>{
@@ -13,19 +14,21 @@ const page = () => {
     
   <header className="flex flex-row justify-between items-center bg-white m-2.5">
     <img className="w-24 h-24" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png" alt='logo'/>
-   <button onClick={handleClick} className="bg-teal-800 rounded-md py-2.5 px-2.5">
+    <div className="relative flex flex-col ">
+   <button onClick={handleClick} className="bg-teal-800 rounded-md py-2.5 px-2.5 gap-2.5 mb-2">
   {menu?<X color="#ffff" />:<Menu color="#ffff" />}
    </button>
    {
     (menu)?
-            <nav className="p-2.5 bg-orange-400">
-            
-            <li>about</li>
-            <li></li>
-            <li>contact</li>
-        </nav>:
-        ""
+            <div className="absolute right-0 top-full mt-2 w-40 bg-orange-400 rounded-lg  flex flex-col p-2 ">
+        <a href="/" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">Home</a>
+        <a href="/products" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">Products</a>
+        <a href="/about" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">About</a>
+        <a href="/cart" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">Cart</a>
+        <a href='#' className=''></a>
+      </div>:""
    }
+   </div>
   </header>
 
   )
