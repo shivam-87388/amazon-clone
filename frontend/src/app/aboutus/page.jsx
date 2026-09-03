@@ -32,7 +32,7 @@ const page = () => {
         </div>
         <div className="flex flex-row  w-32 gap-1.5 px-3 py-1.5 bg-teal-800 rounded-lg font-semibold text-white">
           <CircleUserRound color="#ffffff" />
-         <a href>Signup</a>
+         <a href>login</a>
         </div>
         
       </div>:""
