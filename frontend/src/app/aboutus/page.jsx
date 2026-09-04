@@ -26,14 +26,17 @@ const page = () => {
         <a href="/products" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">Products</a>
         <a href="/about" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">About</a>
         <a href="/cart" className="text-white hover:bg-orange-500 px-3 py-1.5 rounded transition">Cart</a>
-        <div className="flex flex-row  gap-1.5 px-3 py-2.5 bg-teal-800 rounded-lg font-semibold text-white items-center justify-center">
+
+         <div className="flex flex-row  w-fullgap-1.5 px-3 py-2.5 bg-teal-800 rounded-lgitems-center justify-center">
           <CircleUserRound color="#ffffff" />
-         <a href="#">Signup</a>
+         <a href="#" className=" font-semibold text-white ">login</a>
         </div>
-        <div className="flex flex-row  w-full gap-1.5 px-3 py-2.5 bg-teal-800 rounded-lg font-semibold text-white items-center">
+
+        <div className="flex flex-row w-full gap-1.5 px-3 py-2.5 bg-teal-800 rounded-lg  items-center justify-center">
           <CircleUserRound color="#ffffff" />
-         <a href="#">login</a>
+         <a href="#" className=" font-semibold text-white ">Signup</a>
         </div>
+       
         
       </div>:""
    }
