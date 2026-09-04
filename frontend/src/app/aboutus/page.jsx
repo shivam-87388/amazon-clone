@@ -13,7 +13,7 @@ const page = () => {
 
   return (
     
-  <header className="flex flex-row justify-between items-center bg-white m-2.5">
+  <header className="md:hidden flex flex-row justify-between items-center bg-white m-2.5">
     <img className="w-24 h-24" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png" alt='logo'/>
     <div className="relative flex flex-col pr-3">
    <button onClick={handleClick} className="bg-teal-800 rounded-md py-2.5 px-2.5 gap-2.5 mb-2">
