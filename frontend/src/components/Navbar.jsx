@@ -46,7 +46,7 @@ const navbar = () => {
 {/* mobile navbar */}
 <header className="md:hidden flex flex-row justify-between items-center bg-white m-2">
     <img className="w-24 h-24" src="/Gemini_Generated_Image_e2nvm6e2nvm6e2nv.png" alt='logo'/>
-    <div className="relative flex flex-col pr-3">
+    <div className="relative flex flex-col mr-2.5">
    <button onClick={handleClick} className="bg-teal-800 rounded-md py-2.5 px-2.5 gap-2.5 mb-2">
   {menu?<X color="#ffff" />:<Menu color="#ffff" />}
    </button>
