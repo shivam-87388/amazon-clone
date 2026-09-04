@@ -30,7 +30,7 @@ const page = () => {
           <CircleUserRound color="#ffffff" />
          <a href="#">Signup</a>
         </div>
-        <div className="flex flex-row  w-full gap-1.5 px-3 py-2.5 bg-teal-800 rounded-lg font-semibold text-white">
+        <div className="flex flex-row  w-full gap-1.5 px-3 py-2.5 bg-teal-800 rounded-lg font-semibold text-white items-center">
           <CircleUserRound color="#ffffff" />
          <a href="#">login</a>
         </div>
