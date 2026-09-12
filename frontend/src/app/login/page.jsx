@@ -3,8 +3,8 @@ import React from 'react'
 const login = () => {
   return (
     <div className="min-h-screen p-4 bg-white flex justify-center items-center gap-2.5">
-  <div className="w-96 h-[541px] px-4 py-6 inline-flex flex-col justify-center items-center gap-2.5">
-    <div className="text-center justify-start text-white text-2xl font-bold font-['Merriweather']">login form</div>
+  <div className="w-96 h-135.25 px-4 py-6 inline-flex flex-col justify-center items-center gap-2.5">
+    <h1 className="text-center justify-start text-black text-2xl font-bold font-['Merriweather']">login form</h1>
     <div className="self-stretch px-8 flex flex-col justify-start items-start gap-2.5">
       <div className="self-stretch flex flex-col justify-start items-start gap-1.5">
         <div className="self-stretch h-14 flex flex-col justify-start items-start gap-1">
