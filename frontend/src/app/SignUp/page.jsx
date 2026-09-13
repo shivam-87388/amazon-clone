@@ -53,7 +53,7 @@ const createAccount = () => {
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
         <Toaster position="top-center" reverseOrder={false}/>
-      <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center">
+      <div style={{ backgroundImage: "url('/rectangle.png')" }} className=" bg-cover bg-no-repeat bg-center w-1/4">
       <form onSubmit={createAccountForm.handleSubmit} className="flex flex-col items-center justify-center px-12 py-12">
         <h1 className="text-4xl font-bold font-['Lora'] text-white" >Create Account</h1>
         <div className="flex flex-col w-full px-2 py-4 gap-1">
