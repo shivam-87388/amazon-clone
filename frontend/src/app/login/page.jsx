@@ -1,8 +1,16 @@
 'use client'
-import React from 'react'
-import { Eye } from 'lucide-react';
+import React, { useState } from 'react'
+import { Eye, EyeOff } from 'lucide-react';
 
 const login = () => {
+  // hide show icon
+  const [show,setShow] = useState(false);
+  const handleClick =()=>{
+    setShow(!show);
+  };
+  
+  
+
   return (
  <div className="w-full min-h-screen p-4 bg-white flex justify-center items-center">
   <form className="bg-[url('/rectangle.png')] bg-center bg-no-repeat bg-cover px-10 py-4 flex flex-col justify-center items-center gap-4">
@@ -12,14 +20,16 @@ const login = () => {
   {/* email section */}
   <div className="w-full flex flex-col items-start justify-center">
     <label htmlFor="user-email" className="text-white text-base font-normal font-['Merriweather'] px-1">Email</label>
-    <input type="email" id='user-email' placeholder="email" className="w-full focus:ring-2 focus:ring-blue-500 text-white border-2 outline-hidden border-white px-2 py-1 rounded-md"/>
+    <input type="email" id='user-email' placeholder="email" className="font-['Merriweather'] w-full focus:ring-2 focus:ring-blue-500 text-white border-2 outline-hidden border-white px-2 py-1 rounded-md"/>
   </div>
   {/* password section */}
   <div className="w-full flex flex-col ">
-    <label htmlFor="user-password" className="text-white text-base font-normal font-['Merriweather'] px-1">password</label>
+    <label htmlFor="user-password" className="text-white text-base font-normal font-['Merriweather'] px-1">Password</label>
     <div className="w-full border-2 border-white flex flex-row items-center rounded-md px-2 py-1 focus-within:ring-2 focus-within:ring-blue-500 gap-1">
-      <input type='password' id="user-password" placeholder="password" className="text-white outline-hidden"/>
-      <Eye color='white'/>
+      <input  type={(show) ? "text":"password"}  id="user-password" placeholder="password" className="text-white outline-hidden font-['Merriweather']"/>
+      <button type="button" onClick={handleClick}>{(show)? <Eye color='white'/>:<EyeOff color='white'/>}
+        </button>
+      
 
       </div> 
 
