@@ -16,10 +16,10 @@ const login = () => {
   </div>
   {/* password section */}
   <div className="w-full flex flex-col ">
-    <label>password</label>
-    <div className="w-full border-2 border-white flex flex-row items-center rounded-md px-2 py-1 outline:border-2 outline:border-blue-500">
-      <input className="text-white outline-hidden "/>
-      <Eye color='white' />
+    <label htmlFor="user-password" className="text-white text-base font-normal font-['Merriweather'] px-1">password</label>
+    <div className="w-full border-2 border-white flex flex-row items-center rounded-md px-2 py-1 focus-within:ring-2 focus-within:ring-blue-500 gap-1">
+      <input type='password' id="user-password" placeholder="password" className="text-white outline-hidden"/>
+      <Eye color='white'/>
 
       </div> 
 
@@ -29,7 +29,7 @@ const login = () => {
 
 
  </div>
- <button className=" py-2.5 px-12 text-center text-base font-semibold font-['Merriweather'] bg-teal-800 text-white rounded-md">login</button>
+ <button type="submit" className=" py-2.5 px-12 text-center text-base font-semibold font-['Merriweather'] bg-teal-800 text-white rounded-md">login</button>
   </form>
  </div>
 
