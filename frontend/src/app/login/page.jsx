@@ -11,8 +11,14 @@ const login = () => {
   {/* email section */}
   <div className="flex flex-col items-start justify-center">
     <label htmlFor="email" className="text-white text-base font-normal font-['Merriweather'] px-1">email</label>
-    <input id='email' placeholder="email" className="border-2 border-white px-2 py-1 rounded-md"/>
+    <input id='email' placeholder="email" className="text-white border-2 border-white px-2 py-1 rounded-md"/>
   </div>
+  {/* password section */}
+  <div className="flex flex-col items-start justify-center">
+    <label htmlFor="email" className="text-white text-base font-normal font-['Merriweather'] px-1">email</label>
+    <input id='email' placeholder="email" className="text-white border-2 border-white px-2 py-1 rounded-md"/>
+  </div>
+
  
 
 
