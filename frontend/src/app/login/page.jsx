@@ -29,15 +29,8 @@ const login = () => {
       <input  type={(show) ? "text":"password"}  id="user-password" placeholder="password" className="text-white outline-hidden font-['Merriweather']"/>
       <button type="button" onClick={handleClick}>{(show)? <Eye color='white'/>:<EyeOff color='white'/>}
         </button>
-      
-
       </div> 
-
   </div>
-
- 
-
-
  </div>
  <button type="submit" className=" py-2.5 px-12 text-center text-base font-semibold font-['Merriweather'] bg-teal-800 text-white rounded-md">login</button>
   </form>
