@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react';
+import { useFormik } from 'formik';
 
 const login = () => {
   // hide show icon
@@ -8,6 +9,16 @@ const login = () => {
   const handleClick =()=>{
     setShow(!show);
   };
+   const formik = useFormik({
+     initialValues: {
+       email: '',
+       password:''
+     },
+     onSubmit: async(values) => {
+      console.log(values);
+      
+     },
+   });
   
   
 
