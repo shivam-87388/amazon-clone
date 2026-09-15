@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react';
 import { useFormik } from 'formik';
-import toast, { Toaster } from 'react-hot-toast';
 import * as yup from 'yup';
 
 
@@ -30,15 +29,7 @@ const login = () => {
        user_password:''
      },
      onSubmit: async(values) => {
-      try {
-        console.log(values);
-        toast.success('Successfully toasted!')
-      } catch (error) {
-        toast.error("This didn't work.")
-        
-      }
-      
-      
+       console.log(values);
      },
      validationSchema: loginSchema
    });
