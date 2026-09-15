@@ -24,7 +24,7 @@ const login = () => {
 
   return (
  <div className="w-full min-h-screen p-4 bg-white flex justify-center items-center">
-  <form className="bg-[url('/rectangle.png')] bg-center bg-no-repeat bg-cover px-10 py-4 flex flex-col justify-center items-center gap-4">
+  <form onSubmit={loginform.handleSubmit} className="bg-[url('/rectangle.png')] bg-center bg-no-repeat bg-cover px-10 py-4 flex flex-col justify-center items-center gap-4">
  <h1 className="text-center text-white text-2xl font-bold font-['Merriweather']">login form</h1>
 
  <div className="flex flex-col items-center justify-center gap-3">
