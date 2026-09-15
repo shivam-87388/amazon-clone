@@ -9,7 +9,7 @@ const login = () => {
   const handleClick =()=>{
     setShow(!show);
   };
-   const formik = useFormik({
+   const login = useFormik({
      initialValues: {
        email: '',
        password:''
