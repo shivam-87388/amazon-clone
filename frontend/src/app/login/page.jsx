@@ -9,7 +9,7 @@ const login = () => {
   const handleClick =()=>{
     setShow(!show);
   };
-   const login = useFormik({
+   const loginform = useFormik({
      initialValues: {
        email: '',
        password:''
@@ -31,13 +31,13 @@ const login = () => {
   {/* email section */}
   <div className="w-full flex flex-col items-start justify-center">
     <label htmlFor="user-email" className="text-white text-base font-normal font-['Merriweather'] px-1">Email</label>
-    <input type="email" id='user-email' value={formik.values.email} placeholder="email" className="font-['Merriweather'] w-full focus:ring-2 focus:ring-blue-500 text-white border-2 outline-hidden border-white px-2 py-1 rounded-md"/>
+    <input type="email" id='user-email' value={loginform.values.email} onChange={loginform.handleChange} placeholder="email" className="font-['Merriweather'] w-full focus:ring-2 focus:ring-blue-500 text-white border-2 outline-hidden border-white px-2 py-1 rounded-md"/>
   </div>
   {/* password section */}
   <div className="w-full flex flex-col ">
     <label htmlFor="user-password" className="text-white text-base font-normal font-['Merriweather'] px-1">Password</label>
     <div className="w-full border-2 border-white flex flex-row items-center rounded-md px-2 py-1 focus-within:ring-2 focus-within:ring-blue-500 gap-1">
-      <input value={formik.values.password} type={(show) ? "text":"password"}  id="user-password" placeholder="password" className="text-white outline-hidden font-['Merriweather']"/>
+      <input value={loginform.values.password} onChange={loginform.handleChange} type={(show) ? "text":"password"}  id="user-password" placeholder="password" className="text-white outline-hidden font-['Merriweather']"/>
       <button type="button" className="hover:cursor-pointer" onClick={handleClick}>{(show)? <Eye color='white'/>:<EyeOff color='white'/>}
         </button>
       </div> 
