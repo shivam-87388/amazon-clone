@@ -28,7 +28,7 @@ const login = () => {
        user_email: '',
        user_password:''
      },
-     onSubmit: async(values) => {
+    onSubmit: async(values) => {
        console.log(values);
      },
      validationSchema: loginSchema
