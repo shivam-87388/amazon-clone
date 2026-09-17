@@ -3,6 +3,25 @@ const router = express.Router();
 const user = require("../models/User");
 const bcrypt = require('bcrypt');
 
+//login
+router.post("/login", async(req,res)=>{
+    
+    try {
+        const loginuser = await user.findOne({email:req.body.email})
+        if (loginuser != null) {
+         const passwordMatch = await bcrypt.compare(
+                req.body.password,
+                loginuser.password,
+            );   
+        }
+        
+        
+    } catch (error) {
+        res.status(500).json({message:error.message})  
+    }
+
+})
+
 //create account
 router.post("/create_user", async(req,res)=>{
     try {
