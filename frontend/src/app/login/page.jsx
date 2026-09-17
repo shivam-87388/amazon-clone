@@ -4,6 +4,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 
@@ -32,10 +33,19 @@ const login = () => {
      },
     onSubmit: async(values) => {
        console.log(values);
-       const user = await axios.post("http://localhost:5000/user/create_user",values)
-
+       try {
+        const response = await axios.post("http://localhost:5000/user/create_user",values);
+        console.log(response.data.message,)
+        toast.success('logined')
+        
+       } catch (error) {
+        console.log(error.response.data)
+        toast.error("login error")
+        
        }
-     },
+      
+       },
+     
      validationSchema: loginSchema
    });
   
@@ -43,7 +53,10 @@ const login = () => {
 
   return (
  <div className="w-full min-h-screen p-4 bg-white flex justify-center items-center">
-  
+  <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
   <form onSubmit={loginform.handleSubmit} className="bg-[url('/rectangle.png')] bg-center bg-no-repeat bg-cover px-10 py-4 flex flex-col justify-center items-center gap-4">
  <h1 className="text-center text-white text-2xl font-bold font-['Merriweather']">login form</h1>
 

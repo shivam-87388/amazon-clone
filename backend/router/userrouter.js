@@ -11,15 +11,17 @@ router.post("/login", async(req,res)=>{
         if (loginuser !=null) {
              const passwordMatch = await bcrypt.compare(
                 req.body.password,
-                findUser.password,
+                loginuser.password,
             );
             if (passwordMatch == true) {
-                 return(res.status(200).json({message:"login sucessfull"}))
+               return res.status(200).json({message:"login sucessfull"})
             } else {
-              return(res.status(404).json({message:"login fail"}))  
-            }
-            
-        }  
+              return res.status(404).json({message:"password not match"})
+            } 
+        }else {
+              return res.status(404).json({message:"user not found"})
+            } 
+      
     } catch (error) {
         res.status(500).json({message:error.message})  
     }
