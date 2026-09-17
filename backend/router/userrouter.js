@@ -8,18 +8,18 @@ router.post("/login", async(req,res)=>{
     
     try {
         const loginuser = await user.findOne({email:req.body.email})
-        if (loginuser != null) {
-         const passwordMatch = await bcrypt.compare(
+        if (loginuser !=null) {
+             const passwordMatch = await bcrypt.compare(
                 req.body.password,
-                loginuser.password,
+                findUser.password,
             );
-            if (passwordMatch === true) {
-                
-                
-            }   
-        }
-        
-        
+            if (passwordMatch == true) {
+                 return(res.status(200).json({message:"login sucessfull"}))
+            } else {
+              return(res.status(404).json({message:"login fail"}))  
+            }
+            
+        }  
     } catch (error) {
         res.status(500).json({message:error.message})  
     }
