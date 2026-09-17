@@ -12,7 +12,11 @@ router.post("/login", async(req,res)=>{
          const passwordMatch = await bcrypt.compare(
                 req.body.password,
                 loginuser.password,
-            );   
+            );
+            if (passwordMatch === true) {
+                
+                
+            }   
         }
         
         
