@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import axios from 'axios';
+
 
 
 const login = () => {
@@ -30,6 +32,9 @@ const login = () => {
      },
     onSubmit: async(values) => {
        console.log(values);
+       const user = await axios.post("http://localhost:5000/user/create_user",values)
+
+       }
      },
      validationSchema: loginSchema
    });
@@ -42,15 +47,15 @@ const login = () => {
   <form onSubmit={loginform.handleSubmit} className="bg-[url('/rectangle.png')] bg-center bg-no-repeat bg-cover px-10 py-4 flex flex-col justify-center items-center gap-4">
  <h1 className="text-center text-white text-2xl font-bold font-['Merriweather']">login form</h1>
 
- <div className="flex flex-col items-center justify-center gap-3">
+ <div className="flex flex-col items-center justify-center gap-1">
   {/* email section */}
   <div className="w-full flex flex-col items-start justify-center">
     <label htmlFor="user_email" className="text-white text-base font-normal font-['Merriweather'] px-1">Email</label>
-    <input type="email" id='user_email' value={loginform.values.user_email} onBlur={loginform.handleBlur} onChange={loginform.handleChange} required placeholder="email" className="font-['Merriweather'] w-full focus:ring-2 focus:ring-blue-500 text-white border-2 outline-hidden border-white px-2 py-1 rounded-md"/>{loginform.touched.user_email && loginform.errors.user_email && (
-  <span className="text-black text-sm">
-    {loginform.errors.user_email}
-  </span>
-)}
+    <input type="email" id='user_email' value={loginform.values.user_email} onBlur={loginform.handleBlur} onChange={loginform.handleChange} required placeholder="email" className="font-['Merriweather'] w-full focus:ring-2 focus:ring-blue-500 text-white border-2 outline-hidden border-white px-2 py-1 rounded-md"/><span className="text-black text-xs h-2">
+  {loginform.touched.user_email && loginform.errors.user_email
+    ? loginform.errors.user_email
+    : '\u00A0'}
+</span>
   </div>
   {/* password section */}
   <div className="w-full flex flex-col ">
@@ -59,8 +64,12 @@ const login = () => {
       <input value={loginform.values.user_password} onChange={loginform.handleChange} type={(show) ? "text":"password"}  id="user_password" placeholder="password" required className="text-white outline-hidden font-['Merriweather']"/>
       <button type="button" className="hover:cursor-pointer" onClick={handleClick}>{(show)? <Eye color='white'/>:<EyeOff color='white'/>}
         </button>
-        
       </div>
+    <span className="text-black text-xs h-2">
+  {loginform.touched.user_password && loginform.errors.user_password
+    ? loginform.errors.user_password
+    : '\u00A0'}
+</span>   
        
   </div>
  </div>
